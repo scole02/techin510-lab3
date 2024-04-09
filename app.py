@@ -2,8 +2,6 @@ import os
 from dataclasses import dataclass
 
 import streamlit as st
-import streamlit_pydantic as sp
-from pydantic import BaseModel, Field
 import psycopg2
 from dotenv import load_dotenv
 
