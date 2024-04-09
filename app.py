@@ -9,7 +9,7 @@ load_dotenv()
 
 con = psycopg2.connect(os.getenv("DATABASE_URL"))
 cur = con.cursor()
-
+print(cur.connection)
 cur.execute(
     """
     CREATE TABLE IF NOT EXISTS prompts (
@@ -21,6 +21,7 @@ cur.execute(
     )
     """
 )
+con.commit()
 
 @dataclass
 class Prompt:
